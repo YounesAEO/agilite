@@ -1,5 +1,8 @@
 package org.example.agilite;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Equipe {
     // variables d'instance - remplacez l'exemple qui suit par le vôtre
     private int nombreDeMatchs;
@@ -7,6 +10,7 @@ public class Equipe {
     private int nombreDeMatchNuls;
 
     private String nom;
+    private List<String> joueurs;
 
     /**
      * Constructeur d'objets de classe Equipe
@@ -17,6 +21,7 @@ public class Equipe {
         nombreDeMatchs = 0;
         nombreDeVictoires = 0;
         nombreDeMatchNuls = 0;
+        joueurs = new ArrayList<String>();
     }
 
 
@@ -44,5 +49,19 @@ public class Equipe {
         }
 
         nombreDeMatchs++;
+    }
+
+    public String getNom(){
+        return nom;
+    }
+
+    public void ajouterJoueur(String j){
+        joueurs.add(j);
+    }
+
+    public void enleverJoueur(String j){
+        if(joueurs.contains(j)){
+            joueurs.remove(j);
+        }
     }
 }

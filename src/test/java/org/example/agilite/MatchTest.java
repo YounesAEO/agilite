@@ -4,6 +4,8 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.Date;
+
 public class MatchTest {
     private Equipe maroc;
     private Equipe portugal;
@@ -36,7 +38,9 @@ public class MatchTest {
     {
         maroc = new Equipe();
         portugal = new Equipe();
-        quart = new Match(maroc, portugal);
+        quart = new Match(maroc, portugal, new Date());
+        quart.setScore(maroc, 1);
+        quart.setScore(portugal,0);
     }
 
     /**
@@ -54,7 +58,7 @@ public class MatchTest {
     public void testJouerUnMatch()
     {
         setUp();
-        quart.jouerUnMatch(1);
+        quart.terminerUnMatch();
         assertEquals(1, maroc.getNombreDeMatchs());
         assertEquals(1, maroc.getNombreDeVictoires());
         assertEquals(0, maroc.getNombresDeMatchsNuls());
