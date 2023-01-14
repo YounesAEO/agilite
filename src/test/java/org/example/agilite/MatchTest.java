@@ -36,8 +36,8 @@ public class MatchTest {
     @BeforeEach
     public void setUp() // throws java.lang.Exception
     {
-        maroc = new Equipe();
-        portugal = new Equipe();
+        maroc = new Equipe("maroc");
+        portugal = new Equipe("portugal");
         quart = new Match(maroc, portugal, new Date());
         quart.setScore(maroc, 1);
         quart.setScore(portugal,0);

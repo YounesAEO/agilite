@@ -4,28 +4,36 @@ Feature: US01 Jouer un match
   Afin de mettre à jour les statistiques de l'équipe
 
   Scenario Outline: Enregistrement d'une victoire
-    Given une équipe comprenant un nom <equipe1> et une autre équipe comprenant un nom <equipe2>
+    Given une équipe comprenant un nom <equipe1>
+    And une autre équipe comprenant un nom <equipe2>
     When le match termine avec <buts1> supérieur à <buts2>
-    Then <equipeGagnante> est <equipe1> et <nombreVictoiresAncien> devient <nombreVictoires> et <nombreMatchsAncien> devient <nombreMatchs>
+    Then <equipe1> gagne
+    And nombre de victoires de l'équipe gagnante s'incrémente
+    And nombre de matchs des deux équipes s'incrémente
 
     Examples:
-      | equipe1 | equipe2 | buts1 | buts2 | equipeGagnante | nombreVictoiresAncien | nombreVictoires | nombreMatchsAncien | nombreMatchs |
-      | maroc   | france  | 3     | 0     |   maroc         | 0                       | 1                | 0                    | 1             |
-
+      | equipe1 | equipe2 | buts1 | buts2 |
+      | "maroc"   | "france"  | 3     | 0   |
   Scenario Outline: Enregistrement d'une défaite
-    Given une équipe comprenant un nom <equipe1> et une autre équipe comprenant un nom <equipe2>
+    Given une équipe comprenant un nom <equipe1>
+    And une autre équipe comprenant un nom <equipe2>
     When le match termine avec <buts1> inférieur à <buts2>
-    Then <equipeGagnante> est <equipe2> et <nombreMatchsAncien> devient <nombreMatchs>
+    Then <equipe1> perd
+    And nombre de matchs des deux équipes s'incrémente
 
     Examples:
-      | equipe1 | equipe2   | buts1 | buts2 | equipeGagnante | nombreMatchsAncien | nombreMatchs |
-      | croatie | argentine | 0     | 2     | argentine       | 0                    | 1             |
+      | equipe1 | equipe2   | buts1 | buts2 |
+      | "croatie" | "argentine" | 0     | 2     |
 
   Scenario Outline: Enregistrement d'un match nul
-    Given une équipe comprenant un nom <equipe1> et une autre équipe comprenant un nom <equipe2>
+    Given une équipe comprenant un nom <equipe1>
+    And une autre équipe comprenant un nom <equipe2>
     When le match termine avec <buts1> égale à <buts2>
-    Then <equipeGagnante> est null et <nombreNullsAncien> devient <nombreNulls> et et <nombreMatchsAncien> devient <nombreMatchs>
+    Then les deux équipes égalisent
+    And nombre de matchs nuls des deux équipes s'incrémente
+    And nombre de matchs des deux équipes s'incrémente
+
 
     Examples:
-      | equipe1 | equipe2   | buts1 | buts2 | equipeGagnante | nombreNullsAncien | nombreNulls | nombreMatchsAncien | nombreMatchs |
-      | croatie | argentine | 0     | 0     | null            | 0                   | 1            | 0                    | 1             |
+      | equipe1 | equipe2   | buts1 | buts2 |
+      | "croatie" | "argentine" | 0     | 0     |

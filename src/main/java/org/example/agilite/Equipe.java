@@ -15,16 +15,19 @@ public class Equipe {
     /**
      * Constructeur d'objets de classe Equipe
      */
-    public Equipe()
+    public Equipe(String nom)
     {
         // initialisation des variables d'instance
         nombreDeMatchs = 0;
         nombreDeVictoires = 0;
         nombreDeMatchNuls = 0;
         joueurs = new ArrayList<String>();
+        this.nom = nom;
     }
 
-
+    public List<String> getListeJoueurs(){
+        return joueurs;
+    }
     public int getNombreDeMatchs()
     {
         // Insérez votre code ici
@@ -59,9 +62,10 @@ public class Equipe {
         joueurs.add(j);
     }
 
-    public void enleverJoueur(String j){
-        if(joueurs.contains(j)){
-            joueurs.remove(j);
-        }
+    public String enleverJoueur(String j){
+        if(joueurs.size() == 0) return "l'équipe ne contient pas de joueurs";
+        if(!joueurs.contains(j)) return "joueur introuvable";
+        joueurs.remove(j);
+        return "joueur supprimé";
     }
 }

@@ -60,15 +60,16 @@ public class Match {
     {
         // Insérez votre code ici
         Equipe equipeGagnante = getEquipeGagnante();
-        if (equipeGagnante.equals(e1)) {
-            e1.jouerUnMatch(1);
-            e2.jouerUnMatch(-1);
-        } else if (equipeGagnante.equals(e2)) {
-            e1.jouerUnMatch(-1);
-            e2.jouerUnMatch(1);
-        } else {
+        if(equipeGagnante == null){
             e1.jouerUnMatch(0);
             e2.jouerUnMatch(0);
+        }
+        else if (equipeGagnante.equals(e1)) {
+            e1.jouerUnMatch(1);
+            e2.jouerUnMatch(-1);
+        } else {
+            e1.jouerUnMatch(-1);
+            e2.jouerUnMatch(1);
         }
 
     }

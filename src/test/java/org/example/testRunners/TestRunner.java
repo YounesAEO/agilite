@@ -8,6 +8,7 @@ import io.cucumber.junit.CucumberOptions;
  * @author Iamyo
  */
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "resources/features", glue = "")
-public class TestRunner_US01_JouerUnMatch {
+@CucumberOptions( monochrome = true, features = "classpath:features", glue = "org.example.stepDefinitions")
+public class TestRunner {
+
 }

@@ -4,28 +4,20 @@ Feature: US03 Enelver Un Joueur
   Afin de suivre la liste des joueurs de mon équipe
 
   Scenario Outline: Suppression d'un joueur
-    Given une équipe comprenant un nom <equipe1> et un joueur appelé <joueur1>
+    Given une équipe ayant un nom <equipe1>
     When <joueur1> est supprimé de <equipe1>
-    Then <nombreJoueursAncien> de <equipe1> devient <nombreJoueurs>
+    Then la liste des joueurs de <equipe1> se décrémente
 
     Examples:
-      | equipe1 | joueur1 | nombreJoueursAncien | nombreJoueurs |
-      | maroc   | ziyech  | 1                     | 0              |
+      | equipe1 | joueur1 |
+      | "maroc"   | "ziyech"  |
 
   Scenario Outline: Joueur introuvable
-    Given une equipe comprenant un nom <equipe1> et un joueur appelé <joueur1>
+    Given une équipe ayant un nom <equipe1>
+    And <joueur1> n'appartient pas à <equipe1>
     When <joueur1> est supprimé de <equipe1>
-    Then le système envoie un <messageErreur>
+    Then le système envoie une erreur disant: <messageErreur>
 
     Examples:
       | equipe1 | joueur1              | messageErreur        |
-      | maroc   | "Cristiano Ronaldo"  | "joueur introuvable" |
-
-  Scenario Outline: Equipe ne contient pas de joueurs
-    Given une equipe comprenant un nom <equipe1> et un effectif <nombreJoueurs> et un joueur appelé <joueur1>
-    When <joueur1> est supprimé de <equipe1> et <nombreJoueurs> égale à 0
-    Then le système envoie un <messageErreur>
-
-    Examples:
-      | equipe1 | joueur1              | nombreJoueurs | messageErreur        |
-      | maroc   | "ziyech"             | 0             | "l'équipe ne contient pas de joueurs" |
+      | "maroc"   | "Cristiano Ronaldo"  | "joueur introuvable" |
