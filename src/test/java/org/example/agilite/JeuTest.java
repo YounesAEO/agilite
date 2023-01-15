@@ -43,7 +43,7 @@ public class JeuTest {
         String expected = "Partie facile de TheBest du 10/09/2022 est chargée!";
 
         JeuTest.jeu.nouvellePartie("facile", "TheBest");
-        JeuTest.jeu.getParties().get(0).setDate_sauvegarde("10/09/2022");
+        JeuTest.jeu.getParties().get(0).setDateSauvegarde("10/09/2022");
         String actual = JeuTest.jeu.chargerPartie(partie);
         assertEquals(actual, expected);
 

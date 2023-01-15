@@ -15,7 +15,7 @@ public class PartieTest {
 
     @Test
     public void testchargerPartie() {
-        PartieTest.partie.setDate_sauvegarde("10/09/2022");
+        PartieTest.partie.setDateSauvegarde("10/09/2022");
 
         String actual = PartieTest.partie.ChargerPartie();
 

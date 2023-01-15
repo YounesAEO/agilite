@@ -28,7 +28,7 @@ public class US_001_Continuer_une_Partie {
     public void la_partie_sauvegardée_contient_sa_difficulté_et_sa_dernière_date_de_sauvegarde(String difficulte, String date) {
         // Write code here that turns the phrase above into concrete actions
         partieExpected.setDifficulte(difficulte);
-        partieExpected.setDate_sauvegarde(date);
+        partieExpected.setDateSauvegarde(date);
     }
     @Given("Le personnage {string} de la partie sauvegardée possède son niveau actuel {int}")
     public void le_personnage_de_la_partie_sauvegardée_possède_son_niveau_actuel(String pseudoJoueur, int niveau) {

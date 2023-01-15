@@ -47,7 +47,7 @@ public class Partie implements Observer {
         this.difficulte = choix;
         this.joueur = new Joueur(pseudoJoueur);
         Date date = new Date();
-        this.setDate_sauvegarde(date);
+        this.setDateSauvegarde(date);
         this.partie = "partie"+numero;
     }
 
@@ -73,7 +73,7 @@ public class Partie implements Observer {
     }
 
     public String sauvegarderPartie(Date date){
-        setDate_sauvegarde(date);
+        setDateSauvegarde(date);
         return "Partie " + this.difficulte + " de "
                 + this.joueur.getPseudoJoueur() + " du "
                 + this.date_sauvegarde +" est sauvegardée!";
