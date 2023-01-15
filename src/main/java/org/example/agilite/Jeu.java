@@ -20,12 +20,12 @@ public class Jeu {
     }
 
     public Jeu() {
+
     }
 
     public Partie nouvellePartie(String difficulte, String pseudoJoueur, String equipeChoisie){
         num++;
-        int numPartie = this.parties.size()+num;
-        this.parties.add(new Partie(difficulte, pseudoJoueur, numPartie));
+        this.parties.add(new Partie(difficulte, pseudoJoueur, num));
         Partie nouvellePartie = this.parties.get(this.parties.size()-1);
         String equipeJ = nouvellePartie.getJoueur().choisirEquipe(equipeChoisie);
         FacadeMatch facadeMatch = new FacadeMatch(equipeJ, "FCB");

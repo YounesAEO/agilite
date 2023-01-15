@@ -19,15 +19,17 @@ public class JeuTest {
     }
     @Test
     public void testnouvellePartie() {
-        List<String> actual = Arrays.asList("partie1", "partie2", "partie3");
+        List<String> actual = Arrays.asList("partie2", "partie3", "partie4");
         List<String> expected = new ArrayList<String>();
 
-        JeuTest.jeu.nouvellePartie("facile", "TheBest", "RMA");
-        JeuTest.jeu.nouvellePartie("normale", "Killer999", "RMA");
-        JeuTest.jeu.nouvellePartie("difficile", "ZamNo1", "RMA");
 
+        JeuTest.jeu.nouvellePartie("facile", "TheBest", "RMA");
         String partie1 = JeuTest.jeu.getParties().get(0).toString();
+
+        JeuTest.jeu.nouvellePartie("normale", "Killer999", "RMA");
         String partie2 = JeuTest.jeu.getParties().get(1).toString();
+
+        JeuTest.jeu.nouvellePartie("difficile", "ZamNo1", "RMA");
         String partie3 = JeuTest.jeu.getParties().get(2).toString();
 
         expected.add(partie1);

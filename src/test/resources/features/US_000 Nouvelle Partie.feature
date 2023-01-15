@@ -1,7 +1,7 @@
 #Author: Katia.Nseir - Maria.Bou-Jawde
 
 Feature: US_000 Nouvelle Partie
-  En tant que joueur, je voudrais commencer une nouvelle partie de mon jeu préféré.
+  En tant que joueur, je voudrais jouer à mon jeu préférée afin de commencer une nouvelle partie
 
   Scenario Outline: Créer une nouvelle partie et choisir sa difficulté
     Given Le lancement du jeu par le joueur pour creer une nouvelle partie
