@@ -1,4 +1,6 @@
-Feature: US03 Enelver Un Joueur
+#Author: Younes.Abouelomoum - Nadine.Mahiout
+
+Feature: US_005 Enlever Un Joueur
   En tant que responsable d'équipe
   Je veux enlever un joueur de mon équipe
   Afin de suivre la liste des joueurs de mon équipe
