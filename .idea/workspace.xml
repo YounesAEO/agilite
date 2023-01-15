@@ -6,10 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="4cffcefb-737c-42ae-a774-2b6ad362170a" name="Changes" comment="add functional tests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/agilite/Partie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/agilite/Partie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/agilite/Jeu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/agilite/Jeu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/agilite/JeuTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/agilite/JeuTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/agilite/PartieTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/agilite/PartieTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/stepDefinitions/US_001_Continuer_une_Partie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/stepDefinitions/US_001_Continuer_une_Partie.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +78,7 @@
       <recent name="org.example.stepDefinitions" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestRunner (1)">
+  <component name="RunManager" selected="JUnit.JeuTest">
     <configuration name="EquipeTest.testEnleverJoueur" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="agilitee" />
       <extension name="coverage">
@@ -97,6 +95,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="JeuTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Agilite" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.agilite.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.agilite" />
+      <option name="MAIN_CLASS_NAME" value="org.example.agilite.JeuTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MatchTest.testGetEquipeGagnante" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="agilitee" />
       <extension name="coverage">
@@ -108,22 +121,6 @@
       <option name="PACKAGE_NAME" value="org.example.agilite" />
       <option name="MAIN_CLASS_NAME" value="org.example.agilite.MatchTest" />
       <option name="METHOD_NAME" value="testGetEquipeGagnante" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MatchTest.testTerminerUnMatch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="agilitee" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.designPatterns.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example.agilite" />
-      <option name="MAIN_CLASS_NAME" value="org.example.agilite.MatchTest" />
-      <option name="METHOD_NAME" value="testTerminerUnMatch" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -160,19 +157,19 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="JUnit.JeuTest" />
       <item itemvalue="JUnit.TestRunner (1)" />
       <item itemvalue="JUnit.EquipeTest.testEnleverJoueur" />
       <item itemvalue="JUnit.MatchTest.testGetEquipeGagnante" />
-      <item itemvalue="JUnit.MatchTest.testTerminerUnMatch" />
       <item itemvalue="JUnit.TestRunner" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.JeuTest" />
         <item itemvalue="JUnit.TestRunner (1)" />
         <item itemvalue="JUnit.TestRunner" />
         <item itemvalue="JUnit.MatchTest.testGetEquipeGagnante" />
         <item itemvalue="JUnit.EquipeTest.testEnleverJoueur" />
-        <item itemvalue="JUnit.MatchTest.testTerminerUnMatch" />
       </list>
     </recent_temporary>
   </component>
@@ -185,7 +182,7 @@
       <option name="presentableId" value="Default" />
       <updated>1673604358166</updated>
       <workItem from="1673797954284" duration="417000" />
-      <workItem from="1673798390941" duration="3191000" />
+      <workItem from="1673798390941" duration="6444000" />
     </task>
     <task id="LOCAL-00001" summary="upload classes">
       <created>1673639197691</created>
@@ -230,6 +227,17 @@
     <MESSAGE value="add features" />
     <MESSAGE value="add functional tests" />
     <option name="LAST_COMMIT_MESSAGE" value="add functional tests" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/example/agilite/JeuTest.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/agilitee$TestRunnerUS01JouerUnMatch.ic" NAME="TestRunnerUS01JouerUnMatch Coverage Results" MODIFIED="1673709528516" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

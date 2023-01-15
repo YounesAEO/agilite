@@ -19,8 +19,8 @@ public class JeuTest {
     }
     @Test
     public void testnouvellePartie() {
-        List<String> actual = Arrays.asList("partie1", "partie2", "partie3");
-        List<String> expected = new ArrayList<String>();
+        List<String> expected = Arrays.asList("partie1", "partie2", "partie3");
+        List<String> actual = new ArrayList<String>();
 
         JeuTest.jeu.nouvellePartie("facile", "TheBest");
         JeuTest.jeu.nouvellePartie("normale", "Killer999");
@@ -30,11 +30,11 @@ public class JeuTest {
         String partie2 = JeuTest.jeu.getParties().get(1).toString();
         String partie3 = JeuTest.jeu.getParties().get(2).toString();
 
-        expected.add(partie1);
-        expected.add(partie2);
-        expected.add(partie3);
+        actual.add(partie1);
+        actual.add(partie2);
+        actual.add(partie3);
 
-        assertEquals(actual,expected);
+        assertEquals(expected,actual);
     }
 
     @Test
