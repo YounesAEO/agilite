@@ -27,6 +27,7 @@ public class FacadeMatch {
     }
 
     public void terminerMatch(){
+
         m1.terminerUnMatch();
     }
 }

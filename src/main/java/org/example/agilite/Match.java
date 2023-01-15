@@ -15,6 +15,7 @@ public class Match implements Subject {
     private final Equipe e2;
     private Date date;
     private HashMap<String, Integer> score;
+
     private Boolean matchTermine;
     private Observer observer;
 
@@ -44,6 +45,11 @@ public class Match implements Subject {
     public String getScore(){
         return e1.getNom()+": "+score.get(e1.getNom())+" - "+e2.getNom()+": "+score.get(e2.getNom());
     }
+
+    public Boolean getMatchTermine() {
+        return matchTermine;
+    }
+
 
     public Date getDate() {
         return date;
