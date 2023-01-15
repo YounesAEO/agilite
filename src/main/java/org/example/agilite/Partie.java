@@ -25,13 +25,13 @@ public class Partie implements Observer {
         return false;
     }
 
-    public void setDate_sauvegarde(Date date_sauv) {
+    public void setDateSauvegarde(Date date_sauv) {
         SimpleDateFormat DateFor = new SimpleDateFormat("dd/MM/yyyy");
         String stringDate = DateFor.format(date_sauv);
         this.date_sauvegarde = stringDate;
     }
 
-    public void setDate_sauvegarde(String date_sauv) {
+    public void setDateSauvegarde(String date_sauv) {
         this.date_sauvegarde = date_sauv;
     }
 
