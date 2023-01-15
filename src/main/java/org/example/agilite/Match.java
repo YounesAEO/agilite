@@ -1,15 +1,20 @@
 package org.example.agilite;
 
+import org.example.designPatterns.Observer;
+import org.example.designPatterns.Subject;
+
 import java.util.Date;
 import java.util.HashMap;
 
-public class Match {
+public class Match implements Subject {
 
     // variables d'instance - remplacez l'exemple qui suit par le vôtre
     private final Equipe e1;
     private final Equipe e2;
     private Date date;
     private HashMap<String, Integer> score;
+    private Boolean matchTermine;
+    private Observer observer;
 
     /**
      * Constructeur d'objets de classe Match
@@ -25,6 +30,7 @@ public class Match {
         score = new HashMap<String, Integer>();
         score.put(e1.getNom(), 0);
         score.put(e2.getNom(), 0);
+        matchTermine = false;
     }
 
     public void setScore(Equipe e, int buts){
@@ -35,6 +41,10 @@ public class Match {
 
     public String getScore(){
         return e1.getNom()+": "+score.get(e1.getNom())+" - "+e2.getNom()+": "+score.get(e2.getNom());
+    }
+
+    public Date getDate() {
+        return date;
     }
 
     public Equipe getEquipeGagnante(){
@@ -71,6 +81,21 @@ public class Match {
             e1.jouerUnMatch(-1);
             e2.jouerUnMatch(1);
         }
+        matchTermine = true;
+    }
 
+    @Override
+    public void enregistrerObsever(Observer o) {
+        observer = o;
+    }
+
+    @Override
+    public void supprimerObserver(Observer o) {
+        observer = null;
+    }
+
+    @Override
+    public void notifierObserver() {
+        observer.update(this);
     }
 }

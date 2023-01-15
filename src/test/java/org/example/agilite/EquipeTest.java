@@ -1,15 +1,17 @@
 package org.example.agilite;
-import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.Date;
 
-public class MatchTest {
-    private Equipe maroc;
-    private Equipe portugal;
-    private Match quart;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+public class EquipeTest {
+    private Equipe realMadrid;
+    private String joueur;
 
 
 
@@ -24,7 +26,7 @@ public class MatchTest {
     /**
      * Constructeur de la classe-test MatchTest
      */
-    public MatchTest()
+    public EquipeTest()
     {
     }
 
@@ -36,11 +38,9 @@ public class MatchTest {
     @BeforeEach
     public void setUp() // throws java.lang.Exception
     {
-        maroc = new Equipe("maroc");
-        portugal = new Equipe("portugal");
-        quart = new Match(maroc, portugal, new Date());
-        quart.setScore(maroc, 1);
-        quart.setScore(portugal,0);
+        realMadrid = new Equipe("Real Madrid");
+        joueur = "Benzema";
+
     }
 
     /**
@@ -55,30 +55,21 @@ public class MatchTest {
     }
 
     @Test
-    public void testTerminerUnMatch()
+    public void testAjouterJoueur()
     {
         setUp();
-        quart.terminerUnMatch();
-        assertEquals(1, maroc.getNombreDeMatchs());
-        assertEquals(1, maroc.getNombreDeVictoires());
-        assertEquals(0, maroc.getNombresDeMatchsNuls());
-        assertEquals(1, portugal.getNombreDeMatchs());
-        assertEquals(0, portugal.getNombreDeVictoires());
-        assertEquals(0, portugal.getNombresDeMatchsNuls());
+        realMadrid.ajouterJoueur(joueur);
+        assertTrue(realMadrid.getListeJoueurs().contains(joueur));
     }
 
     @Test
-    public void testGetEquipeGagnante()
+    public void testEnleverJoueur()
     {
         setUp();
-        assertEquals(quart.getEquipeGagnante().getNom(), maroc.getNom());
-    }
-
-    @Test
-    public void testGetEquipePerdante()
-    {
-        setUp();
-        assertEquals(quart.getEquipePerdante().getNom(), portugal.getNom());
+        assertEquals(realMadrid.enleverJoueur(joueur), "l'équipe ne contient pas de joueurs");
+        realMadrid.ajouterJoueur(joueur);
+        assertEquals(realMadrid.enleverJoueur("Ronaldo"), "joueur introuvable");
+        assertEquals(realMadrid.enleverJoueur(joueur), "joueur supprimé");
     }
 
 }
