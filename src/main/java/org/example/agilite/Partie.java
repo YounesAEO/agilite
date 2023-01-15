@@ -4,7 +4,6 @@ import org.example.designPatterns.Subject;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
 /**
  * @author Katia.Nseir - Maria.Bou-Jawde
  * **/

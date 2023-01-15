@@ -1,6 +1,6 @@
 #Author: Younes.Abouelomoum - Nadine.Mahiout
 
-Feature: US_004 Jouer un Match
+Feature: US_003 Jouer un Match
   En tant que responsable d'équipe
   Je veux avoir le résultat final d'un match de mon équipe
   Afin de mettre à jour les statistiques de l'équipe

@@ -4,7 +4,9 @@ import org.example.designPatterns.FacadeMatch;
 
 import java.util.ArrayList;
 import java.util.Date;
-
+/**
+ * @author Katia.Nseir - Maria.Bou-Jawde
+ * **/
 public class Jeu {
     ArrayList<Partie> parties = new ArrayList<>();;
     static int num = 0;

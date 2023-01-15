@@ -2,7 +2,9 @@ package org.example.agilite;
 
 import java.util.ArrayList;
 import java.util.List;
-
+/**
+ * @author Younes.Abouelomoum - Nadine.Mahiout
+ * **/
 public class Equipe {
     // variables d'instance - remplacez l'exemple qui suit par le vôtre
     private int nombreDeMatchs;

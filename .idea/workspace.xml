@@ -6,8 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="4cffcefb-737c-42ae-a774-2b6ad362170a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/US01.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/US_004 Jouer un Match.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/US03.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/US03.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/agilite/Equipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/agilite/Equipe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/agilite/Jeu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/agilite/Jeu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/agilite/Joueur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/agilite/Joueur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/agilite/Match.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/agilite/Match.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/agilite/Partie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/agilite/Partie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/US_004 Jouer un Match.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/US_003 Jouer un Match.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/US_005 Enlever Un Joueur.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/US_004 Enlever Un Joueur.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,7 +188,7 @@
       <option name="presentableId" value="Default" />
       <updated>1673604358166</updated>
       <workItem from="1673797954284" duration="417000" />
-      <workItem from="1673798390941" duration="769000" />
+      <workItem from="1673798390941" duration="1305000" />
     </task>
     <task id="LOCAL-00001" summary="upload classes">
       <created>1673639197691</created>

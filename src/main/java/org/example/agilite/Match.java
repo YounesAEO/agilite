@@ -5,7 +5,9 @@ import org.example.designPatterns.Subject;
 
 import java.util.Date;
 import java.util.HashMap;
-
+/**
+ * @author Younes.Abouelomoum - Nadine.Mahiout
+ * **/
 public class Match implements Subject {
 
     // variables d'instance - remplacez l'exemple qui suit par le vôtre

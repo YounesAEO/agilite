@@ -1,5 +1,4 @@
 package org.example.agilite;
-
 /**
  * @author Katia.Nseir - Maria.Bou-Jawde
  * **/
