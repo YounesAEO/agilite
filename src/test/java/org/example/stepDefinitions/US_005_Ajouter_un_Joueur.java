@@ -1,17 +1,13 @@
 package org.example.stepDefinitions;
 
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.example.agilite.Equipe;
-import org.example.agilite.Match;
-
-import java.util.Date;
 
 import static org.junit.Assert.*;
 
-public class StepDefsUS02AjouterUnJoueur {
+public class US_005_Ajouter_un_Joueur {
     private Equipe e1;
     private int nbJoueursAncien;
     @Given("une équipe comprenant le nom {string}")

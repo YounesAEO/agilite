@@ -4,7 +4,6 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.example.agilite.Equipe;
 import org.example.agilite.Joueur;
 import org.example.agilite.Partie;
 import org.example.designPatterns.FacadeMatch;
@@ -13,7 +12,7 @@ import org.junit.Assert;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class US_006_Sauvegarder_une_Partie {
+public class US_007_Sauvegarder_une_Partie {
 
     private Partie partie;
     private FacadeMatch facadeMatch;

@@ -7,13 +7,12 @@ import io.cucumber.java.en.When;
 import org.example.agilite.Equipe;
 import org.example.agilite.Match;
 import org.example.agilite.Partie;
-import org.example.designPatterns.Observer;
 
 import java.util.Date;
 
 import static org.junit.Assert.*;
 
-public class StepDefsUS01JouerUnMatch {
+public class US_003_Jouer_un_Match {
     private Equipe e1;
     private Equipe e2;
     private Match matchE1E2;

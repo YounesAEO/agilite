@@ -9,7 +9,7 @@ import org.junit.Assert;
 
 import java.util.Date;
 
-public class US_005_Lancer_un_Match {
+public class US_006_Lancer_un_Match {
 
     private FacadeMatch facadeMatch;
     private Joueur joueur;

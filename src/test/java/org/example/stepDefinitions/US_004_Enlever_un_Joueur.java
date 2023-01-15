@@ -1,6 +1,5 @@
 package org.example.stepDefinitions;
 
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -9,7 +8,7 @@ import org.example.agilite.Equipe;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 
-public class StepDefsUS03EnleverUnJoueur {
+public class US_004_Enlever_un_Joueur {
     private Equipe e1;
     private int nbJoueursAncien;
     private String joueurIntrouvable;
