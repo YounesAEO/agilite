@@ -9,7 +9,7 @@ import java.util.Date;
  * **/
 public class Jeu {
     ArrayList<Partie> parties = new ArrayList<>();;
-    static int num;
+    static int num = 0;
 
     public ArrayList<Partie> getParties() {
         return parties;
@@ -20,14 +20,14 @@ public class Jeu {
     }
 
     public Jeu() {
-        this.num = 0;
+
     }
 
-    public Partie nouvellePartie(String difficulte, String pseudoJoueur){
+    public Partie nouvellePartie(String difficulte, String pseudoJoueur, String equipeChoisie){
         num++;
         this.parties.add(new Partie(difficulte, pseudoJoueur, num));
         Partie nouvellePartie = this.parties.get(this.parties.size()-1);
-        String equipeJ = nouvellePartie.getJoueur().choisirEquipe();
+        String equipeJ = nouvellePartie.getJoueur().choisirEquipe(equipeChoisie);
         FacadeMatch facadeMatch = new FacadeMatch(equipeJ, "FCB");
         facadeMatch.lancerMatch(new Date());
         nouvellePartie.suivreMatch(facadeMatch.getMatch());

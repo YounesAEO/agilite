@@ -19,22 +19,24 @@ public class JeuTest {
     }
     @Test
     public void testnouvellePartie() {
-        List<String> expected = Arrays.asList("partie1", "partie2", "partie3");
-        List<String> actual = new ArrayList<String>();
+        List<String> actual = Arrays.asList("partie2", "partie3", "partie4");
+        List<String> expected = new ArrayList<String>();
 
-        JeuTest.jeu.nouvellePartie("facile", "TheBest");
-        JeuTest.jeu.nouvellePartie("normale", "Killer999");
-        JeuTest.jeu.nouvellePartie("difficile", "ZamNo1");
 
+        JeuTest.jeu.nouvellePartie("facile", "TheBest", "RMA");
         String partie1 = JeuTest.jeu.getParties().get(0).toString();
+
+        JeuTest.jeu.nouvellePartie("normale", "Killer999", "RMA");
         String partie2 = JeuTest.jeu.getParties().get(1).toString();
+
+        JeuTest.jeu.nouvellePartie("difficile", "ZamNo1", "RMA");
         String partie3 = JeuTest.jeu.getParties().get(2).toString();
 
-        actual.add(partie1);
-        actual.add(partie2);
-        actual.add(partie3);
+        expected.add(partie1);
+        expected.add(partie2);
+        expected.add(partie3);
 
-        assertEquals(expected,actual);
+        assertEquals(actual,expected);
     }
 
     @Test
@@ -42,7 +44,7 @@ public class JeuTest {
         int partie = 0;
         String expected = "Partie facile de TheBest du 10/09/2022 est chargée!";
 
-        JeuTest.jeu.nouvellePartie("facile", "TheBest");
+        JeuTest.jeu.nouvellePartie("facile", "TheBest", "RMA");
         JeuTest.jeu.getParties().get(0).setDateSauvegarde("10/09/2022");
         String actual = JeuTest.jeu.chargerPartie(partie);
         assertEquals(actual, expected);

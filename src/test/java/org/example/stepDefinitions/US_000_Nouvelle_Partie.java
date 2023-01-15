@@ -28,7 +28,7 @@ public class US_000_Nouvelle_Partie {
         num++;
         nouvellePartieExpected = new Partie(difficulte, pseudoJoueur, num);
         this.expected.add(nouvellePartieExpected);
-        jeu.nouvellePartie(difficulte, pseudoJoueur);
+        jeu.nouvellePartie(difficulte, pseudoJoueur, "RMA");
         assertNotNull(nouvellePartieExpected);
         assertNotNull(expected);
     }

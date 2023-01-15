@@ -10,6 +10,7 @@ public class MatchTest {
     private Equipe maroc;
     private Equipe portugal;
     private Match quart;
+    private Partie partie;
 
 
 
@@ -41,6 +42,7 @@ public class MatchTest {
         quart = new Match(maroc, portugal, new Date());
         quart.setScore(maroc, 1);
         quart.setScore(portugal,0);
+        partie = new Partie("Difficle", "ZamNo1", 2);
     }
 
     /**
@@ -58,6 +60,7 @@ public class MatchTest {
     public void testTerminerUnMatch()
     {
         setUp();
+        partie.suivreMatch(quart);
         quart.terminerUnMatch();
         assertEquals(1, maroc.getNombreDeMatchs());
         assertEquals(1, maroc.getNombreDeVictoires());

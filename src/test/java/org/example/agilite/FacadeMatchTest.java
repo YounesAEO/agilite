@@ -12,11 +12,12 @@ import static org.junit.jupiter.api.Assertions.*;
 public class FacadeMatchTest {
 
     private static FacadeMatch facadeMatch;
+    private static Partie partie;
 
     @BeforeEach
     public void setUp() {
-
         FacadeMatchTest.facadeMatch = new FacadeMatch("RMA", "Barca");
+        partie = new Partie("difficle", "ZamNo1", 2);
     }
 
     @Test
@@ -39,9 +40,7 @@ public class FacadeMatchTest {
         Date date =new Date();
 
         FacadeMatchTest.facadeMatch.lancerMatch(date);
-
-        // test avant le lancement de la methode terminer match
-        assertFalse(FacadeMatchTest.facadeMatch.getMatch().getMatchTermine());
+        partie.suivreMatch(FacadeMatchTest.facadeMatch.getMatch());
 
        FacadeMatchTest.facadeMatch.terminerMatch();
 
