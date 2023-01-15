@@ -38,7 +38,8 @@ public class Joueur {
         return msg + "Niveau: "+this.niveau;
     }
 
-    public String choisirEquipe(){
-        return "RMA";
+    public String choisirEquipe(String equipeChoisie){
+
+        return equipeChoisie;
     }
 }

@@ -89,7 +89,9 @@ public class Match implements Subject {
             e1.jouerUnMatch(-1);
             e2.jouerUnMatch(1);
         }
+
         matchTermine = true;
+        this.notifierObserver();
     }
 
     @Override

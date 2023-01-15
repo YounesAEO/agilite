@@ -22,9 +22,9 @@ public class JeuTest {
         List<String> actual = Arrays.asList("partie1", "partie2", "partie3");
         List<String> expected = new ArrayList<String>();
 
-        JeuTest.jeu.nouvellePartie("facile", "TheBest");
-        JeuTest.jeu.nouvellePartie("normale", "Killer999");
-        JeuTest.jeu.nouvellePartie("difficile", "ZamNo1");
+        JeuTest.jeu.nouvellePartie("facile", "TheBest", "RMA");
+        JeuTest.jeu.nouvellePartie("normale", "Killer999", "RMA");
+        JeuTest.jeu.nouvellePartie("difficile", "ZamNo1", "RMA");
 
         String partie1 = JeuTest.jeu.getParties().get(0).toString();
         String partie2 = JeuTest.jeu.getParties().get(1).toString();
@@ -42,7 +42,7 @@ public class JeuTest {
         int partie = 0;
         String expected = "Partie facile de TheBest du 10/09/2022 est chargée!";
 
-        JeuTest.jeu.nouvellePartie("facile", "TheBest");
+        JeuTest.jeu.nouvellePartie("facile", "TheBest", "RMA");
         JeuTest.jeu.getParties().get(0).setDateSauvegarde("10/09/2022");
         String actual = JeuTest.jeu.chargerPartie(partie);
         assertEquals(actual, expected);

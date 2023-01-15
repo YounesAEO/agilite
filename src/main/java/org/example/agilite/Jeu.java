@@ -22,12 +22,12 @@ public class Jeu {
     public Jeu() {
     }
 
-    public Partie nouvellePartie(String difficulte, String pseudoJoueur){
+    public Partie nouvellePartie(String difficulte, String pseudoJoueur, String equipeChoisie){
         num++;
         int numPartie = this.parties.size()+num;
         this.parties.add(new Partie(difficulte, pseudoJoueur, numPartie));
         Partie nouvellePartie = this.parties.get(this.parties.size()-1);
-        String equipeJ = nouvellePartie.getJoueur().choisirEquipe();
+        String equipeJ = nouvellePartie.getJoueur().choisirEquipe(equipeChoisie);
         FacadeMatch facadeMatch = new FacadeMatch(equipeJ, "FCB");
         facadeMatch.lancerMatch(new Date());
         nouvellePartie.suivreMatch(facadeMatch.getMatch());

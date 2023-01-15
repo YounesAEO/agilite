@@ -6,6 +6,8 @@ import io.cucumber.java.en.When;
 
 import org.example.agilite.Equipe;
 import org.example.agilite.Match;
+import org.example.agilite.Partie;
+import org.example.designPatterns.Observer;
 
 import java.util.Date;
 
@@ -15,8 +17,10 @@ public class StepDefsUS01JouerUnMatch {
     private Equipe e1;
     private Equipe e2;
     private Match matchE1E2;
+    private Partie partie;
     @Given("une équipe comprenant un nom {string}")
     public void creerEquipe(String equipe1){
+        partie = new Partie("difficle", "ZamNo1", 2);
         e1 = new Equipe(equipe1);
     }
     @Given("une autre équipe comprenant un nom {string}")
@@ -40,6 +44,7 @@ public class StepDefsUS01JouerUnMatch {
     @Then("nombre de victoires de l'équipe gagnante s'incrémente")
     public void incrementerNombreDeVictoiresEquipeGagnante(){
         int nbVictoiresAncien = matchE1E2.getEquipeGagnante().getNombreDeVictoires();
+        partie.suivreMatch(matchE1E2);
         matchE1E2.terminerUnMatch();
         assertEquals(nbVictoiresAncien+1, matchE1E2.getEquipeGagnante().getNombreDeVictoires());
     }
@@ -48,6 +53,7 @@ public class StepDefsUS01JouerUnMatch {
     public void incrementerNombreDeMatchsDeuxEquipes(){
         int nbMatchsE1Ancien = e1.getNombreDeMatchs();
         int nbMatchsE2Ancien = e2.getNombreDeMatchs();
+        partie.suivreMatch(matchE1E2);
         matchE1E2.terminerUnMatch();
         assertEquals(nbMatchsE1Ancien+1, e1.getNombreDeMatchs());
         assertEquals(nbMatchsE2Ancien+1, e2.getNombreDeMatchs());
@@ -85,6 +91,7 @@ public class StepDefsUS01JouerUnMatch {
     public void incrementerNombreMatchNuls(){
         int nbMatchsNulsE1Ancien = e1.getNombresDeMatchsNuls();
         int nbMatchsNulsE2Ancien = e2.getNombresDeMatchsNuls();
+        partie.suivreMatch(matchE1E2);
         matchE1E2.terminerUnMatch();
         assertEquals(nbMatchsNulsE1Ancien+1, e1.getNombreDeMatchs());
         assertEquals(nbMatchsNulsE2Ancien+1, e2.getNombreDeMatchs());
