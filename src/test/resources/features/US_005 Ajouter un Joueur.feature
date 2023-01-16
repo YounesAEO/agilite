@@ -1,6 +1,6 @@
 #Author: Younes.Abouelomoum - Nadine.Mahiout
 
-Feature: US02 Ajouter Un Joueur
+Feature: US_005 Ajouter Un Joueur
   En tant que responsable d'équipe je veux ajouter un nouveau joueur à mon équipe afin de suivre la liste des joueurs de mon équipe
 
   Scenario Outline: Ajout de joueur
