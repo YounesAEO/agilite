@@ -12,28 +12,8 @@ public class MatchTest {
     private Match quart;
     private Partie partie;
 
+    public MatchTest() {}
 
-
-    // Définissez ici les variables d'instance nécessaires à vos engagements;
-    // Vous pouvez également les saisir automatiquement du présentoir
-    // à l'aide du menu contextuel "Présentoir --> Engagements".
-    // Notez cependant que ce dernier ne peut saisir les objets primitifs
-    // du présentoir (les objets sans constructeur, comme int, float, etc.).
-
-
-
-    /**
-     * Constructeur de la classe-test MatchTest
-     */
-    public MatchTest()
-    {
-    }
-
-    /**
-     * Met en place les engagements.
-     *
-     * Méthode appelée avant chaque appel de méthode de test.
-     */
     @BeforeEach
     public void setUp() // throws java.lang.Exception
     {
@@ -45,11 +25,6 @@ public class MatchTest {
         partie = new Partie("Difficle", "ZamNo1", 2);
     }
 
-    /**
-     * Supprime les engagements
-     *
-     * Méthode appelée après chaque appel de méthode de test.
-     */
     @AfterEach
     public void tearDown() // throws java.lang.Exception
     {
@@ -83,5 +58,4 @@ public class MatchTest {
         setUp();
         assertEquals(quart.getEquipePerdante().getNom(), portugal.getNom());
     }
-
 }
