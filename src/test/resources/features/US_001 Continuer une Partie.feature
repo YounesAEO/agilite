@@ -1,7 +1,7 @@
 #Author: Katia.Nseir - Maria.Bou-Jawde
 
 Feature: US_001 Continuer une Partie
-  En tant que joueur, je voudrais continuer la partie de mon jeu préféré que j'avais arrêté il y a 2 semaines.
+  En tant que joueur, je voudrais lancer une partie de mon jeu préféré afin de continuer la partie que j'avais arrêté il y a 2 semaines.
 
   Scenario Outline: Reprendre une partie savegardée
     Given Un joueur et une partie sauvegardée <partie>
