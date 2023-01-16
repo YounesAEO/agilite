@@ -12,25 +12,14 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class EquipeTest {
     private Equipe realMadrid;
     private String joueur;
-    /**
-     * Constructeur de la classe-test MatchTest
-     */
     public EquipeTest(){}
 
-    /**
-     * Méthode appelée avant chaque appel de méthode de test.
-     */
     @BeforeEach
     public void setUp() // throws java.lang.Exception {
         realMadrid = new Equipe("Real Madrid");
         joueur = "Benzema";
     }
 
-    /**
-     * Supprime les engagements
-     *
-     * Méthode appelée après chaque appel de méthode de test.
-     */
     @AfterEach
     public void tearDown() // throws java.lang.Exception {
         //Libérez ici les ressources engagées par setUp()
